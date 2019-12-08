@@ -15,9 +15,14 @@ function AdminContainer() {
         <Label>Password </Label>
         <input type="text" name="Password" placeholder="Password" />
       </div>
-      <button class="ui button" type="submit">
-        Login
-      </button>
+      <div>
+        <button class="ui primary button" type="submit">
+          Login
+        </button>
+        <button class="ui button" type="Cancel">
+          Cancel
+        </button>
+      </div>
     </form>
   );
 }

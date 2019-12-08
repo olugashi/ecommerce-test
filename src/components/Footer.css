@@ -4,4 +4,7 @@
   background-color: blue;
   color: white;
   padding-bottom: "50";
+  border-top: "1px solid #ddd";
+  height: "60px";
+  line-height: "60px";
 }
