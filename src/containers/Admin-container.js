@@ -4,22 +4,28 @@ import { Link, Redirect } from "react-router-dom";
 import { Menu, Form, Label } from "semantic-ui-react";
 
 function AdminContainer() {
+
+  function handleClick(e) {
+  
+    console.log('The link was clicked.');
+  }
+
   return (
-    <form class="ui form">
+    <form className="ui form">
       <h2>Admin Dashboard</h2>
-      <div class="field">
+      <div className="field">
         <Label>Admin </Label>
         <input type="text" name="Admin-name" placeholder="Admin Name" />
       </div>
-      <div class="field">
+      <div className="field">
         <Label>Password </Label>
         <input type="text" name="Password" placeholder="Password" />
       </div>
       <div>
-        <button class="ui primary button" type="submit">
+        <Link className="ui primary button" type="submit" to="/loginadmin">
           Login
-        </button>
-        <button class="ui button" type="Cancel">
+        </Link>
+        <button className="ui button" type="Cancel">
           Cancel
         </button>
       </div>
