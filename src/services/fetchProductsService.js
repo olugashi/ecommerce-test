@@ -2,7 +2,7 @@ import {
   fetchProductsPending,
   fetchProductsSuccess,
   fetchProductsError
-} from "../actions/fetchingDataActions";
+} from "../actions/fetchProductsActions";
 
 function fetchProducts() {
   return dispatch => {
