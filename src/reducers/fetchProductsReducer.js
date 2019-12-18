@@ -10,7 +10,7 @@ const initialState = {
   error: null
 };
 
-export function FetchProductsReducer(state = initialState, action) {
+export default function FetchProductsReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_PRODUCTS_PENDING:
       return {
