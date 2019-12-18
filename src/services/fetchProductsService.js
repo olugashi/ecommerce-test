@@ -4,10 +4,13 @@ import {
   fetchProductsError
 } from "../actions/fetchProductsActions";
 
+import data from "../components/admin/data";
+
 function fetchProducts() {
   return dispatch => {
+    console.log("*********************************************");
     dispatch(fetchProductsPending());
-    fetch("https://exampleapi.com/products")
+    fetch(data)
       .then(res => res.json())
       .then(res => {
         if (res.error) {
