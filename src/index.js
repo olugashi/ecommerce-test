@@ -9,7 +9,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import AdminContainer from "./containers/Admin-container";
-import LoginAdmin from "./components/admin/Admin"
+import AdminDashboard from "./components/admin/Dashboard";
 
 import Footer from "./components/Footer";
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
           <Route path="/admin" component={AdminContainer} />
-          <Route path="/loginadmin" component={LoginAdmin} />
+          <Route path="/loginadmin" component={AdminDashboard} />
         </Switch>
         <Footer />
       </div>

@@ -1,0 +1,30 @@
+{
+  "Products": [
+    {
+      "Title": "product1",
+      "Id": "1",
+      "Price": "10.0",
+      "Tags": "xxx",
+      "Images": "image path",
+      "Description": "product number 1"
+    },
+    {
+      "Title": "product2",
+      "Id": "3",
+      "Price": "10.0",
+      "Tags": "xxx",
+      "Images": "image path",
+      "Description": "product number 2"
+    }
+  ],
+  "Users": [
+    {
+      "UserName": "User1",
+      "Email": "1@1.com"
+    },
+    {
+      "UserName": "User2",
+      "Email": "2@2.com"
+    }
+  ]
+}

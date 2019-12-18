@@ -1,26 +1,19 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { Link, Redirect } from "react-router-dom";
-import { Menu, Form, Label } from "semantic-ui-react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Form, Label } from "semantic-ui-react";
 
 function AdminContainer() {
-
-  function handleClick(e) {
-  
-    console.log('The link was clicked.');
-  }
-
   return (
     <form className="ui form">
       <h2>Admin Dashboard</h2>
-      <div className="field">
+      <Form.Field>
         <Label>Admin </Label>
         <input type="text" name="Admin-name" placeholder="Admin Name" />
-      </div>
-      <div className="field">
+      </Form.Field>
+      <Form.Field>
         <Label>Password </Label>
         <input type="text" name="Password" placeholder="Password" />
-      </div>
+      </Form.Field>
       <div>
         <Link className="ui primary button" type="submit" to="/loginadmin">
           Login
