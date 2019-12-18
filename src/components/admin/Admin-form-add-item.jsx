@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "semantic-ui-react";
+import data from "./data";
 
 function AdminFormAddItem() {
   const [Title, setTitle] = useState("");
@@ -9,7 +10,13 @@ function AdminFormAddItem() {
   const [Description, setDescription] = useState("");
 
   const handleSubmit = e => {
-    console.log(Title);
+    console.log(data);
+    var obj = JSON.parse(data);
+
+    obj.push({ Title: "jhlkfdsa", Price: "dlfjhlkds" });
+
+    data = JSON.stringify(obj);
+    console.log(obj);
   };
 
   return (

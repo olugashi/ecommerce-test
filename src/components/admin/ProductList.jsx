@@ -6,7 +6,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     setProducts(data.Products);
-    console.log(data.Products);
+    //console.log(data.Products);
   }, []);
 
   return (
@@ -25,13 +25,13 @@ function ProductList() {
       </Table.Header>
       <Table.Body>
         {products.map(product => (
-          <Table.Row>
-            <td>{product.Id}</td>
-            <td>{product.Title}</td>
-            <td>{product.Price}</td>
-            <td>{product.Tags}</td>
-            <td>{product.Images}</td>
-            <td>{product.Description}</td>
+          <Table.Row key={product.Id}>
+            <Table.Cell>{product.Id}</Table.Cell>
+            <Table.Cell>{product.Title}</Table.Cell>
+            <Table.Cell>{product.Price}</Table.Cell>
+            <Table.Cell>{product.Tags}</Table.Cell>
+            <Table.Cell>{product.Images}</Table.Cell>
+            <Table.Cell>{product.Description}</Table.Cell>
           </Table.Row>
         ))}
       </Table.Body>
