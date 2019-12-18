@@ -9,15 +9,7 @@ function AdminFormAddItem() {
   const [Images, setImages] = useState("");
   const [Description, setDescription] = useState("");
 
-  const handleSubmit = e => {
-    console.log(data);
-    var obj = JSON.parse(data);
-
-    obj.push({ Title: "jhlkfdsa", Price: "dlfjhlkds" });
-
-    data = JSON.stringify(obj);
-    console.log(obj);
-  };
+  const handleSubmit = e => {};
 
   return (
     <Form onSubmit={handleSubmit}>

@@ -1,44 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./styles.css";
-import "semantic-ui-css/semantic.min.css";
-import { Menu } from "semantic-ui-react";
 import { Provider } from "react-redux";
-import { Store } from "./storeConfig";
+import { createStore } from "redux";
+import rootReducer from "./reducers/rootReducer";
+import "./styles.css";
+import App from "./app";
 
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import AdminContainer from "./containers/Admin-container";
-import AdminDashboard from "./components/admin/Dashboard";
+const store = createStore(rootReducer);
 
-import Footer from "./components/Footer";
-
-function App() {
-  return (
-    <Provider store={Store}>
-      <Router>
-        <div className="App">
-          <Menu pointing secondary>
-            <Menu.Item name="home" as={Link} to="/" />
-            <Menu.Item name="contact" as={Link} to="/Contact" />
-            <Menu.Item name="about" as={Link} to="/about" />
-            <Menu.Item name="admin" as={Link} to="/admin" />
-          </Menu>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/about" component={About} />
-            <Route path="/admin" component={AdminContainer} />
-            <Route path="/loginadmin" component={AdminDashboard} />
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-    </Provider>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
