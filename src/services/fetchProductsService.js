@@ -5,9 +5,9 @@ import {
 } from "../actions/fetchProductsActions";
 
 function fetchProducts() {
-  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+  //console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
   return dispatch => {
-    console.log("*********************************************");
+    //console.log("*********************************************");
     dispatch(fetchProductsPending());
     fetch("https://jsonplaceholder.typicode.com/todos/2")
       .then(res => res.json())
@@ -16,7 +16,7 @@ function fetchProducts() {
           throw res.error;
         }
         res.payload = res.userId;
-        console.log("fetch Products :" + res.payload);
+        //console.log("fetch Products :" + res.payload);
         dispatch(fetchProductsSuccess(res.payload));
         return res.payload;
       })

@@ -11,7 +11,6 @@ const initialState = {
 };
 
 export default function FetchProductsReducer(state = initialState, action) {
-  console.log("FetchProductsReducer :" + action.payload);
   switch (action.type) {
     case FETCH_PRODUCTS_PENDING:
       return {

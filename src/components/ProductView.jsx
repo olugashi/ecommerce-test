@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch, useCallback } from "react-redux";
 import fetchProducts from "../services/fetchProductsService";
+import { getProducts } from "../reducers/fetchProductsReducer";
 
 function ProductView() {
   const dispatch = useDispatch();
-  const products = useSelector(state => state.fetchProductsReducer);
+  const products = useSelector(state => state.fetchProductsReducer.products);
 
   //const [products, setProducts] = useSelector([]);
 
@@ -16,12 +17,17 @@ function ProductView() {
     //console.log(products);
   }, []);*/
 
-  useEffect(() => {
+  function onFetchdata() {
+    //invoking action
     dispatch(fetchProducts());
-    console.log(products);
-  }, [dispatch]);
+  }
 
-  return <div>products </div>;
+  useEffect(() => {
+    console.log("useEffect " + products);
+    onFetchdata();
+  }, [products]);
+
+  return <div>products : {products}</div>;
 }
 
 export default ProductView;
