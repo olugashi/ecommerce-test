@@ -1,7 +1,7 @@
-import FetchingDataActions from "./FetchingDataActions";
+import FetchProductsActions from "./fetchProductsActions";
 
 const allActions = {
-  FetchingDataActions
+  FetchProductsActions
 };
 
 export default allActions;

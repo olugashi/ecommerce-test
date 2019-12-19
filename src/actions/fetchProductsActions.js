@@ -11,7 +11,7 @@ export function fetchProductsPending() {
 export function fetchProductsSuccess(products) {
   return {
     type: FETCH_PRODUCTS_SUCCESS,
-    products: products
+    payload: products
   };
 }
 
