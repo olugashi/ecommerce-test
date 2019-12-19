@@ -6,12 +6,10 @@ function ProductView() {
   const dispatch = useDispatch();
   const products = useSelector(state => state.fetchProductsReducer.products);
 
-  function onFetchdata() {
-    dispatch(fetchProducts());
-  }
-
   useEffect(() => {
-    console.log("useEffect " + products);
+    const onFetchdata = () => {
+      dispatch(fetchProducts());
+    };
     onFetchdata();
   });
 
